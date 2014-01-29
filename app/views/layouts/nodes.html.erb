@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lifewiki</title>
+  <%= stylesheet_link_tag    "nodes", media: "all"%>
+  <%= javascript_include_tag "nodes", "jquery", "application"%>
+  <%= csrf_meta_tags %>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title>M/D/YY</title>
+  <link href='http://fonts.googleapis.com/css?family=Noticia+Text:400,700,400italic' rel='stylesheet' type='text/css'>
+  <!-- <link rel="stylesheet" href="http://basehold.it/24"> -->
+</head>
+<body>
+  <div id="navbar">
+    <nav class="clearfix">
+      <p><%= link_to 'Index', nodes_path %></p>
+      <ul>
+        <li><a href="#" class="link">Days</a></li>
+        <li><a href="#" class="link">People</a></li>
+        <li><a href="#" class="link">Places</a></li>
+        <li><a href="#" class="link">Concepts</a></li>
+      </ul>
+    </nav>
+    <div class="pocket_shadow"></div>
+    <div class="pocket_hide"></div>
+  </div>
+
+<%= yield %>
+
+</body>
+</html>

@@ -20,8 +20,8 @@
     <%= f.text_field :author %>
   </div>
   <div class="field">
-      <%= f.label :category %><br>
-      <%= f.text_field :category %>
+      <%= f.label :category_id %><br>
+      <%= f.collection_select :category_id, Category.all, :id, :name, :include_blank => true %>
     </div>
   <div class="field">
     <%= f.label :maintext %><br>

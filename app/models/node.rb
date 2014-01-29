@@ -1,3 +1,3 @@
 class Node < ActiveRecord::Base
-  attr_protected :id
+  belongs_to :category
 end

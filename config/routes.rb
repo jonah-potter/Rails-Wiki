@@ -5,8 +5,6 @@ Wiki::Application.routes.draw do
     #   get :days, :people, :places, :concepts
     # end
   end
-  
-  get "nodes/days" => 'nodes#days'
 
   resources :homepage
   

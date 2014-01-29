@@ -4,16 +4,12 @@ class NodesController < ApplicationController
   # GET /nodes
   # GET /nodes.json
   def index
-    if params[:category] == "days"
-      @nodes = Node.where(:category => "Day")
-    elsif params[:category] == "people"
-      @nodes = Node.where(:category => "Person")
-    elsif params[:category] == "places"
-      @nodes = Node.where(:category => "Place")
-    elsif params[:category] == "concepts"
-      @nodes = Node.where(:category => "Concept")
-    else:
+    if params[:category_id].blank?
       @nodes = Node.all
+      @category = nil
+    else
+      @category = Category.find(params[:category_id])
+      @nodes = @category.nodes
     end
   end
   

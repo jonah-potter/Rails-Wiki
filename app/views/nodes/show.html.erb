@@ -1,55 +1,33 @@
-<!-- <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Author:</strong>
-  <%= @node.author %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @node.category %>
-</p>
-
-<%= link_to 'Edit', edit_node_path(@node) %> |
-<%= link_to 'Back', nodes_path %> -->
-<!doctype html>
-<!--By convention that I just made up, day entries should be saved as YYYY-MM-DD-->
-<html lang="en">
-  <body>
-    <div id="main" class="container clearfix">
-      <div id="header" class="title grid_5">
-        <h1><%= @node.title %></h1>
-      </div>
-      <div id="text" class="grid_5 alpha">
-        <p><%= @node.maintext %></p>
-      </div>
-      <div id="sidebar" class="grid_4 omega clearfix">
-        <div class="daily_img">
-          <%= image_tag "template.jpg" %>
-        </div>
-        <div class="info">
-          <table>
-            <tr>
-              <th>Mood:</th> <td>text</td>
-            </tr>
-            <tr>
-              <th>Attire:</th> <td>Description of clothes worn that will probably not be a whole lot longer than this sentence</td>
-            </tr>
-            <tr>
-              <th>Weather:</th> <td>temp, description</td>
-            </tr>
-            <tr>
-              <th>Attribute:</th> <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-            </tr>
-            <tr>
-              <th>Attribute:</th> <td>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
-            </tr>
-            <tr>
-              <th>Attribute:</th> <td>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </div>
-	</body>
-</html>
+<div id="header" class="title grid_5">
+  <h1><%= @node.title %></h1>
+</div>
+<div id="text" class="grid_5 alpha">
+  <p><%= @node.maintext %></p>
+</div>
+<div id="sidebar" class="grid_4 omega clearfix">
+  <div class="daily_img">
+    <%= image_tag "template.jpg" %>
+  </div>
+  <div class="info">
+    <table>
+      <tr>
+        <th>Mood:</th> <td>text</td>
+      </tr>
+      <tr>
+        <th>Attire:</th> <td>Description of clothes worn that will probably not be a whole lot longer than this sentence</td>
+      </tr>
+      <tr>
+        <th>Weather:</th> <td>temp, description</td>
+      </tr>
+      <tr>
+        <th>Attribute:</th> <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
+      </tr>
+      <tr>
+        <th>Attribute:</th> <td>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
+      </tr>
+      <tr>
+        <th>Attribute:</th> <td>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</td>
+      </tr>
+    </table>
+  </div>
+</div>

@@ -1,8 +1,5 @@
-
-<div id= 'main' class="container clearfix">
-    
   <div id="header" class="title grid_5">
-    <p>Index of all nodes<%= " with category of #{@category.name}" unless @category.blank? %><p>
+    <h1>Index of all nodes<%= " with category of #{@category.name}" unless @category.blank? %></h1>
   </div>
   
   <div id="text" class="grid_6 alpha">
@@ -20,6 +17,7 @@
           <th>Category</th>
           <th>Created</th>
           <th>Updated</th>
+          <th id="special"><%= button_to 'New', new_node_path, :method => :get %></th>
         </tr>
       </thead>
       <tbody>
@@ -29,15 +27,12 @@
             <td><%= link_to node.title, node %></td>
             <td><%= node.author %></td>
             <td><%= node.category.name unless node.category.blank? %></td>
-            <td><%= node.created_at %></td>
-            <td><%= node.updated_at %></td>
+            <td><%= prettytime(node.created_at) %></td>
+            <td><%= prettytime(node.updated_at) %></td>
             <td><%= button_to 'Edit', edit_node_path(node), :method => :get %> <%= button_to "Delete", {:controller => :nodes,
   :action => 'destroy', :id => node.id }, { :confirm => 'Are you sure?' , :method => :delete} %></td>
           </tr>
         <% end %>
-        <br>
-
-        <%= link_to 'New Node', new_node_path %>
       </tbody>
     </table>
   </div>
@@ -45,7 +40,7 @@
   <div id="sidebar" class="grid_3 omega clearfix">
     <div class="feat_page_title">
       <h2>Most Recent Entry:</h2>
-      <h3>Title of Entry</h3>
+      <h3><%= Node.last.title %></h3>
     </div>
     <div class="daily_img">
       <%= image_tag "template.jpg" %>
@@ -67,5 +62,3 @@
       </table>
     </div>
   </div>
-  
-</div>

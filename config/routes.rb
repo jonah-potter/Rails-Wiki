@@ -1,10 +1,6 @@
 Wiki::Application.routes.draw do
   
-  resources :nodes do
-    # collection do
-    #   get :days, :people, :places, :concepts
-    # end
-  end
+  resources :nodes
 
   resources :homepage
   

@@ -12,30 +12,6 @@ class NodesController < ApplicationController
       @nodes = @category.nodes
     end
   end
-  
-  # # GET /nodes/days
- #  # GET /nodes/days.json
- #  def days
- #    @nodes = Node.where(:category => "day")
- #  end
- #  
- #  # GET /nodes/people
- #  # GET /nodes/people.json
- #  def people
- #    @nodes = Node.where(:category => "person")
- #  end
- #  
- #  # GET /nodes/places
- #  # GET /nodes/places.json
- #  def places
- #    @nodes = Node.where(:category => "place")
- #  end
- #  
- #  # GET /nodes/concepts
- #  # GET /nodes/concepts.json
- #  def concepts
- #    @nodes = Node.where(:category => "concept")
- #  end
 
   # GET /nodes/1
   # GET /nodes/1.json

@@ -1,269 +1,57 @@
-/* Browser styles reset
-   http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
 /*
- Width: 90vw
- # Columns : 9 
- Column width: 8vw
- Gutter : 2vw 
- */
-.grid_1 {
-  width: 8vw; }
+Syntax error: File to import not found or unreadable: bones.scss.
+              Load paths:
+                /Users/jonah/rails/wiki/public/stylesheets
+                /Users/jonah/rails/wiki/public/stylesheets/sass
+        on line 5 of sass/homepage.scss
 
-.grid_2 {
-  width: 18vw; }
+1: // Place all the styles related to the homepage controller here.
+2: // They will automatically be included in application.css.
+3: // You can use Sass (SCSS) here: http://sass-lang.com/
+4: 
+5: @import 'bones.scss';
+6: 
+7: // Colors:
+8: $primary: #EDEFF0;
+9: $secondary: white;
+10: $text: black;
 
-.grid_3 {
-  width: 28vw; }
-
-.grid_4 {
-  width: 38vw; }
-
-.grid_5 {
-  width: 48vw; }
-
-.grid_6 {
-  width: 58vw; }
-
-.grid_7 {
-  width: 68vw; }
-
-.grid_8 {
-  width: 78vw; }
-
-.grid_9 {
-  width: 88vw; }
-
-.grid_1,
-.grid_2,
-.grid_3,
-.grid_4,
-.grid_5,
-.grid_6,
-.grid_7,
-.grid_8,
-.grid_9 {
-  margin-left: 2vw;
-  float: left;
-  display: block; }
-
-.alpha {
-  margin-left: 0px; }
-
-.omega {
-  margin-right: 0px; }
-
-.container {
-  width: 90vw;
-  margin: auto; }
-
-.clear {
-  clear: both;
-  display: block;
-  overflow: hidden;
-  visibility: hidden;
-  width: 0;
-  height: 0; }
-
-.clearfix:after {
-  clear: both;
-  content: ' ';
-  display: block;
-  font-size: 0;
-  line-height: 0;
-  visibility: hidden;
-  width: 0;
-  height: 0; }
-
-* html .clearfix, *:first-child + html .clearfix {
-  zoom: 1; }
-
-nav {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  color: black;
-  display: block;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  padding: 3px 0;
-  background-color: #edeff0;
-  z-index: 10; }
-  nav ul {
-    margin: 0 6vw 0 0;
-    padding: 3px 0;
-    font-size: 1rem;
-    list-style: none;
-    float: right;
-    display: inline; }
-    nav ul li {
-      white-space: nowrap;
-      list-style: none;
-      float: left;
-      margin-left: 10px;
-      border-radius: 2px;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0) 30%, #cccccc);
-      transition: all .25s; }
-      nav ul li a {
-        color: inherit;
-        text-decoration: none;
-        padding: 2px; }
-      nav ul li:hover {
-        transition: all .25s;
-        padding-top: 3px;
-        margin-bottom: -3px;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, #b3b3b3);
-        transition-timing-function: cubic-bezier(0.2, 0.05, 0.5, 2.5); }
-  nav p {
-    display: inline-block;
-    margin: 3px 0 0 6vw;
-    font-size: 1rem;
-    white-space: nowrap;
-    list-style: none;
-    float: left;
-    border-radius: 2px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0) 30%, #cccccc);
-    transition: all .25s; }
-    nav p a {
-      color: inherit;
-      text-decoration: none;
-      padding: 2px; }
-    nav p:hover {
-      transition: all .25s;
-      padding-top: 3px;
-      margin-bottom: -3px;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, #b3b3b3);
-      transition-timing-function: cubic-bezier(0.2, 0.05, 0.5, 2.5); }
-
-#margintop {
-  height: 30px;
-  width: 100%; }
-
-/* apply a natural box layout model to all elements */
-*, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-:root {
-  font-family: "Noticia Text", "Times New Roman", Times, serif;
-  font-size: 16px;
-  font-weight: 300;
-  color: black;
-  background: #edeff0;
-  width: 100vw;
-  line-height: 1.5rem; }
-
-.pocket_shadow {
-  position: fixed;
-  top: 24px;
-  left: 5.5vw;
-  width: 89vw;
-  height: 3px;
-  background: #00F;
-  z-index: 3;
-  box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.3); }
-
-.pocket_hide {
-  position: absolute;
-  left: 5vw;
-  top: 0;
-  height: 32px;
-  width: 90vw;
-  z-index: 4;
-  background: #edeff0; }
-
-#main {
-  margin-top: 20px;
-  padding: 0 1%;
-  border-radius: 5px; }
-
-#header {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 1.85rem;
-  font-weight: bold;
-  letter-spacing: -.5px;
-  margin: 15px 0 0 0;
-  text-indent: 5%;
-  height: 42px;
-  display: inline-block;
-  padding-bottom: 20px; }
-  #header h1 {
-    margin: 0; }
-
-#text {
-  font-size: .9em;
-  margin-top: 0px;
-  padding: 2%;
-  line-height: 1.5rem;
-  background: white;
-  border-radius: 5px;
-  border: 2px solid #cccccc;
-  text-indent: 2em; }
-  #text p {
-    margin: -1% 0 0 0; }
-
-#sidebar {
-  max-height: 400px;
-  overflow: hidden;
-  background: white;
-  border: 2px solid #cccccc;
-  padding: 0;
-  float: right;
-  border-radius: 5px;
-  line-height: 1.5rem; }
-  #sidebar h2, #sidebar h3 {
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    text-align: center; }
-  #sidebar .daily_img img {
-    max-width: 90%;
-    display: block;
-    margin: 2% auto; }
-  #sidebar .info {
-    font-size: .75em;
-    margin: 3% 5%;
-    text-indent: 2em; }
+Backtrace:
+sass/homepage.scss:5
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/import_node.rb:45:in `import'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:217:in `visit_import'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/tree/root_node.rb:20:in `render'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/engine.rb:315:in `_render'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/engine.rb:262:in `render'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/lib/sass/plugin/compiler.rb:283:in `block in watch'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/vendor/listen/lib/listen/adapters/polling.rb:56:in `call'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/vendor/listen/lib/listen/adapters/polling.rb:56:in `poll'
+/Users/jonah/.rvm/gems/ruby-1.9.3-p194/gems/sass-3.2.14/vendor/listen/lib/listen/adapters/polling.rb:32:in `block in start'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: bones.scss.\A               Load paths:\A                 /Users/jonah/rails/wiki/public/stylesheets\A                 /Users/jonah/rails/wiki/public/stylesheets/sass\A         on line 5 of sass/homepage.scss\A \A 1: // Place all the styles related to the homepage controller here.\A 2: // They will automatically be included in application.css.\A 3: // You can use Sass (SCSS) here: http://sass-lang.com/\A 4: \A 5: @import 'bones.scss';\A 6: \A 7: // Colors:\A 8: $primary: #EDEFF0;\A 9: $secondary: white;\A 10: $text: black;"; }

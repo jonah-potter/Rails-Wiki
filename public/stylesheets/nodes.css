@@ -218,7 +218,7 @@ nav {
   background: #edeff0; }
 
 #main {
-  margin-top: 20px;
+  margin-top: 35px;
   padding: 0 1%;
   border-radius: 5px; }
 
@@ -227,7 +227,7 @@ nav {
   font-size: 1.85rem;
   font-weight: bold;
   letter-spacing: -.5px;
-  margin: 15px 0 0 0;
+  margin: 0;
   text-indent: 5%;
   height: 42px;
   display: inline-block;
@@ -274,3 +274,6 @@ th, td {
 th {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold; }
+
+form.button_to {
+  float: left; }

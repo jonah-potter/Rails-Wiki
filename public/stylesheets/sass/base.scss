@@ -21,7 +21,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -89,16 +88,16 @@ table {
 
 .clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}* html .clearfix,*:first-child+html .clearfix{zoom:1}
 
-// Navbar styling
+// Navbar and misc universal styles
 
 // Colors:
 $primary: #EDEFF0;
 $secondary: white;
 $text: black;
 //$accent: #b3e0f2;
-$accent: lighten(gray, 30%);
+$accent: silver;
 //$border: #FFBB71;
-$border: darken($accent, 10%);
+$border: silver;
 
 // Font stacks:
 $serif: 'Noticia Text', 'Times New Roman', Times, serif;
@@ -144,7 +143,7 @@ nav {
       }
     }
   }
-  p {
+  div {
     display: inline-block;
     margin: 3px 0 0 6vw;
     font-size: 1rem;

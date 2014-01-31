@@ -7,9 +7,13 @@ class NodesController < ApplicationController
     if params[:category_id].blank?
       @nodes = Node.all
       @category = nil
-    else
-      @category = Category.find(params[:category_id])
-      @nodes = @category.nodes
+      elsif params[:category_id]
+        @category = Category.find(params[:category_id])
+        @nodes = @category.nodes
+    end
+    if params[:title]
+      searchstring = "%"+params[:title].gsub(" ", "%")+"%"
+      @nodes = Node.where("title LIKE ?", searchstring)
     end
   end
 

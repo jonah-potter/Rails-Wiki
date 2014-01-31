@@ -19,8 +19,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  vertical-align: baseline; }
+  font-size: 100%; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -146,7 +145,7 @@ nav {
       float: left;
       margin-left: 10px;
       border-radius: 2px;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0) 30%, #cccccc);
+      background: linear-gradient(to top, rgba(0, 0, 0, 0) 30%, silver);
       transition: all .25s; }
       nav ul li a {
         color: inherit;
@@ -156,9 +155,9 @@ nav {
         transition: all .25s;
         padding-top: 3px;
         margin-bottom: -3px;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, #b3b3b3);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, #a7a7a7);
         transition-timing-function: cubic-bezier(0.2, 0.05, 0.5, 2.5); }
-  nav p {
+  nav div {
     display: inline-block;
     margin: 3px 0 0 6vw;
     font-size: 1rem;
@@ -166,17 +165,17 @@ nav {
     list-style: none;
     float: left;
     border-radius: 2px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0) 30%, #cccccc);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 30%, silver);
     transition: all .25s; }
-    nav p a {
+    nav div a {
       color: inherit;
       text-decoration: none;
       padding: 2px; }
-    nav p:hover {
+    nav div:hover {
       transition: all .25s;
       padding-top: 3px;
       margin-bottom: -3px;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, #b3b3b3);
+      background: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, #a7a7a7);
       transition-timing-function: cubic-bezier(0.2, 0.05, 0.5, 2.5); }
 
 #margintop {
@@ -217,38 +216,47 @@ nav {
   z-index: 4;
   background: #edeff0; }
 
-#main {
+#container {
   margin-top: 35px;
   padding: 0 1%;
   border-radius: 5px; }
 
-#header {
+#header .title {
   font-family: "Helvetica Neue", Helvetica, sans-serif;
-  font-size: 1.85rem;
+  font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: -.5px;
   margin: 0;
   text-indent: 5%;
   height: 42px;
   display: inline-block;
-  padding-bottom: 20px; }
-  #header h1 {
+  padding: 10px 0 10px 0;
+  white-space: nowrap; }
+  #header .title h1 {
+    text-indent: 2vw;
     margin: 0; }
+#header .search_index {
+  float: right; }
+  #header .search_index li {
+    float: left;
+    margin: 2px; }
+  #header .search_index .search_submit {
+    margin-top: 20px; }
 
-#text {
+#main {
   font-size: .9em;
   margin-top: 0px;
   padding: 2%;
   line-height: 1.5rem;
   background: white;
   border-radius: 5px;
-  border: 2px solid #cccccc; }
-  #text p {
+  border: 2px solid silver; }
+  #main p {
     margin: -1% 0 0 0; }
 
 #sidebar {
   background: white;
-  border: 2px solid #cccccc;
+  border: 2px solid silver;
   margin: 0;
   padding: 0;
   float: right;
@@ -268,8 +276,8 @@ table {
 
 th, td {
   font-size: .75rem;
-  padding: 8px;
-  border: 2px #b3b3b3 solid; }
+  padding: 4px 8px 4px 8px;
+  border: 2px silver solid; }
 
 th {
   font-family: "Helvetica Neue", Helvetica, sans-serif;

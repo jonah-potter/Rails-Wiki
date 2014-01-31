@@ -4,19 +4,6 @@
 
 @import 'base.scss';
 
-// Colors:
-$primary: #EDEFF0;
-$secondary: white;
-$text: black;
-//$accent: #b3e0f2;
-$accent: lighten(gray, 30%);
-//$border: #FFBB71;
-$border: darken($accent, 10%);
-
-// Font stacks:
-$serif: 'Noticia Text', 'Times New Roman', Times, serif;
-$sans: 'Helvetica Neue', Helvetica, sans-serif;
-
 /* apply a natural box layout model to all elements */
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
@@ -53,28 +40,41 @@ $sans: 'Helvetica Neue', Helvetica, sans-serif;
   background: $primary;
 }
 
-#main {
+#container {
   margin-top: 35px;
   padding: 0 1%;
   border-radius: 5px;
 }
-
 #header {
-  font-family: $sans;
-  font-size: 1.85rem;
-  font-weight: bold;
-  letter-spacing: -.5px;
-  margin: 0;
-  text-indent: 5%;
-  height: 42px;
-  display: inline-block;
-  padding-bottom: 20px;
-  h1 {
+  .title {
+    font-family: $sans;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: -.5px;
     margin: 0;
+    text-indent: 5%;
+    height: 42px;
+    display: inline-block;
+    padding: 10px 0 10px 0;
+    white-space: nowrap;
+    h1 {
+      text-indent: 2vw;
+      margin: 0;
+    }
   }
+  .search_index {
+    float: right;
+    li {
+    float: left;
+    margin: 2px;
+    }
+    .search_submit {
+      margin-top: 20px;
+    }
+  } 
 }
 
-#text {
+#main {
   font-size: .9em;
   margin-top: 0px;
   padding: 2%;
@@ -107,12 +107,13 @@ $sans: 'Helvetica Neue', Helvetica, sans-serif;
     margin: 8px;
   }
 }
+
 table{
   border-collapse: collapse;
 }
 th, td {
   font-size: .75rem;
-	padding: 8px;
+	padding: 4px 8px 4px 8px;
   border: 2px $border solid;
 }
 th {

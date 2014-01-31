@@ -19,8 +19,7 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  vertical-align: baseline; }
+  font-size: 100%; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -146,7 +145,7 @@ nav {
       float: left;
       margin-left: 10px;
       border-radius: 2px;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0) 30%, #cccccc);
+      background: linear-gradient(to top, rgba(0, 0, 0, 0) 30%, silver);
       transition: all .25s; }
       nav ul li a {
         color: inherit;
@@ -156,9 +155,9 @@ nav {
         transition: all .25s;
         padding-top: 3px;
         margin-bottom: -3px;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, #b3b3b3);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, #a7a7a7);
         transition-timing-function: cubic-bezier(0.2, 0.05, 0.5, 2.5); }
-  nav p {
+  nav div {
     display: inline-block;
     margin: 3px 0 0 6vw;
     font-size: 1rem;
@@ -166,17 +165,17 @@ nav {
     list-style: none;
     float: left;
     border-radius: 2px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0) 30%, #cccccc);
+    background: linear-gradient(to top, rgba(0, 0, 0, 0) 30%, silver);
     transition: all .25s; }
-    nav p a {
+    nav div a {
       color: inherit;
       text-decoration: none;
       padding: 2px; }
-    nav p:hover {
+    nav div:hover {
       transition: all .25s;
       padding-top: 3px;
       margin-bottom: -3px;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, #b3b3b3);
+      background: linear-gradient(to top, rgba(0, 0, 0, 0) 10%, #a7a7a7);
       transition-timing-function: cubic-bezier(0.2, 0.05, 0.5, 2.5); }
 
 #margintop {

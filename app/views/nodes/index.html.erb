@@ -2,13 +2,22 @@
   <div class="title">
     <h1>Node Index</h1>
   </div>
-  <ul class="search_index">
+  <ul class="search_index form-horizontal">
     <%= form_tag nodes_path, :method => :get do %>
-      <li class="search_title"><%= label_tag :title %><br>
-        <%= text_field_tag(:title) %></li>
-      <li class="search_category"><%= label_tag :category_id %><br>
-              <%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name, params[:category_id]), :include_blank => true %></li>
-      <li class="search_submit"><%= submit_tag "Apply" %></li>
+      <li>Search by:&nbsp;</li>
+      <li>
+        <%= label_tag :title %><br>
+        <%= text_field_tag :title, params[:title] %>
+      </li>
+      <li>
+        <%= label_tag :author %><br>
+        <%= text_field_tag :author, params[:author] %>
+      </li>
+      <li>
+        <%= label_tag :category_id %><br>
+        <%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name, params[:category_id]), :include_blank => true %>
+      </li>
+      <li class="search_submit btn"><%= submit_tag "Apply" %></li>
     <% end %>
   </ul>
 </div>
@@ -27,7 +36,7 @@
       </tr>
     </thead>
     <tbody>
-      <% @nodes.each do |node| %>
+      <% @nodes.all.each do |node| %>
         <tr>
           <td><%= node.id%></td>
           <td><%= link_to node.title, node %></td>

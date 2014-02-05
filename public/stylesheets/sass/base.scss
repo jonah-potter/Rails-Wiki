@@ -1,3 +1,5 @@
+@import "bootstrap";
+
 /* Browser styles reset
    http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -99,75 +101,6 @@ $accent: silver;
 //$border: #FFBB71;
 $border: silver;
 
-// Font stacks:
-$serif: 'Noticia Text', 'Times New Roman', Times, serif;
-$sans: 'Helvetica Neue', Helvetica, sans-serif;
-
-nav {
-  font-family: $sans;
-  color: $text;
-  display: block;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  padding: 3px 0;
-  background-color: $primary;
-  z-index: 10;
-  ul {
-    margin: 0 6vw 0 0;
-    padding: 3px 0;
-    font-size: 1rem;
-    list-style: none;
-    float: right;
-    display: inline;
-    li {
-      white-space: nowrap;
-      list-style: none;
-      float: left;
-      margin-left: 10px;
-      border-radius: 2px;
-      background: linear-gradient(to top, rgba(0,0,0,0) 30%, $accent);
-      transition: all .25s;
-      a {
-        color: inherit;
-        text-decoration: none;
-        padding: 2px;
-      }
-      &:hover {
-        transition: all .25s;
-        padding-top: 3px;
-        margin-bottom: -3px;
-        background: linear-gradient(to top, rgba(0,0,0,0) 10%, darken($accent, 10%));
-        transition-timing-function: cubic-bezier(0.2, 0.05, 0.5, 2.5);        
-      }
-    }
-  }
-  div {
-    display: inline-block;
-    margin: 3px 0 0 6vw;
-    font-size: 1rem;
-    white-space: nowrap;
-    list-style: none;
-    float: left;
-    border-radius: 2px;
-    background: linear-gradient(to top, rgba(0,0,0,0) 30%, $accent);
-    transition: all .25s;
-    a {
-      color: inherit;
-      text-decoration: none;
-      padding: 2px;
-    }
-    &:hover {
-      transition: all .25s;
-      padding-top: 3px;
-      margin-bottom: -3px;
-      background: linear-gradient(to top, rgba(0,0,0,0) 10%, darken($accent, 10%));
-      transition-timing-function: cubic-bezier(0.2, 0.05, 0.5, 2.5);        
-    }
-  }
-}
-#margintop {
-  height: 30px;
-  width: 100%;
+.container {
+  margin-top: 70px;
 }

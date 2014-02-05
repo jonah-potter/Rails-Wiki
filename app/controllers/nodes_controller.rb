@@ -4,18 +4,20 @@ class NodesController < ApplicationController
   # GET /nodes
   # GET /nodes.json
   def index
-    if params[:category_id].blank?
-      @nodes = Node.all
-      @category = nil
-      elsif params[:category_id]
-        @category = Category.find(params[:category_id])
-        @nodes = @category.nodes
+    @nodes = Node
+    if !(params[:category_id].blank?)
+      @nodes = @nodes.where('category_id = ?', params[:category_id])
     end
-    if params[:title]
-      searchstring = "%"+params[:title].gsub(" ", "%")+"%"
-      @nodes = Node.where("title LIKE ?", searchstring)
+    if !(params[:title].blank?)
+      titlestring = "%"+params[:title].gsub(" ", "%")+"%"
+      @nodes = @nodes.where('title LIKE ?', titlestring)
+    end
+    if !(params[:author].blank?)
+      authorstring = "%"+params[:author].gsub(" ", "%")+"%"
+      @nodes = @nodes.where('author LIKE ?', authorstring)
     end
   end
+
 
   # GET /nodes/1
   # GET /nodes/1.json

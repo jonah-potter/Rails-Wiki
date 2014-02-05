@@ -10,34 +10,13 @@
  }
  
 :root {
-  font-family: $serif;
+  font-family: $font-family-serif;
   font-size: 16px;
   font-weight: 300;
   color: $text;
-  background: $primary;
+  background: white;
   width: 100vw;
   line-height:1.5rem;
-}
-
-.pocket_shadow {
-  position: fixed;
-  top: 24px;
-  left: 5.5vw;
-  width: 89vw;
-  height: 3px;
-  background: #00F;
-  z-index: 3;
-  box-shadow: 0px 1px 5px 1px rgba(0,0,0,.3);
-}
-
-.pocket_hide {
-  position: absolute;
-  left: 5vw;
-  top: 0;
-  height: 32px;
-  width: 90vw;
-  z-index: 4;
-  background: $primary;
 }
 
 #container {
@@ -47,7 +26,7 @@
 }
 #header {
   .title {
-    font-family: $sans;
+    font-family: $font-family-sans-serif;
     font-size: 1.5rem;
     font-weight: bold;
     letter-spacing: -.5px;
@@ -64,12 +43,10 @@
   }
   .search_index {
     float: right;
+    font: .85rem $font-family-sans-serif;
     li {
     float: left;
     margin: 2px;
-    }
-    .search_submit {
-      margin-top: 20px;
     }
   } 
 }
@@ -117,7 +94,7 @@ th, td {
   border: 2px $border solid;
 }
 th {
-  font-family: $sans;
+  font-family: $font-family-sans-serif;
   font-weight: bold;
 }
 

@@ -42,8 +42,7 @@
     }
   }
   .search_index {
-    float: right;
-    font: .85rem $font-family-sans-serif;
+    font: .75rem $font-family-sans-serif;
     li {
     float: left;
     margin: 2px;
@@ -52,7 +51,7 @@
 }
 
 #main {
-  font-size: .9em;
+  font-size: .9rem;
   margin-top: 0px;
   padding: 2%;
   line-height: 1.5rem;
@@ -61,6 +60,14 @@
   border: 2px solid $accent;
   p {
     margin: -1% 0 0 0;
+  }
+  form,
+  form div{
+    font-family: $font-family-sans-serif;
+    display: inline-block;
+  }
+  .table_buttons {
+    white-space: nowrap;
   }
 }
 
@@ -72,6 +79,7 @@
   float: right;
   border-radius: 5px;
   h2, h3 {
+    font-family: $font-family-sans-serif;
     text-align: center;
   }
   .daily_img img {
@@ -90,7 +98,7 @@ table{
 }
 th, td {
   font-size: .75rem;
-	padding: 4px 8px 4px 8px;
+	padding: 4px 4px 4px 4px;
   border: 2px $border solid;
 }
 th {
@@ -98,6 +106,7 @@ th {
   font-weight: bold;
 }
 
-form.button_to {
-  float: left;
+.search_index li.btn.search_submit {
+  padding: 0px;
+  margin-top: 8px;
 }

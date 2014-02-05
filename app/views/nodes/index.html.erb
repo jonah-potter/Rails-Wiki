@@ -1,8 +1,8 @@
-<div id="header" class="grid_6 clearfix alpha">
-  <div class="title">
+<div id="header" class="row">
+  <div class="title col-md-4 col-md-offset-4">
     <h1>Node Index</h1>
   </div>
-  <ul class="search_index form-horizontal">
+  <ul class="search_index form-horizontal col-md-14 col-md-offset-1">
     <%= form_tag nodes_path, :method => :get do %>
       <li>Search by:&nbsp;</li>
       <li>
@@ -17,63 +17,65 @@
         <%= label_tag :category_id %><br>
         <%= select_tag :category_id, options_from_collection_for_select(Category.all, :id, :name, params[:category_id]), :include_blank => true %>
       </li>
-      <li class="search_submit btn"><%= submit_tag "Apply" %></li>
+      <li class="search_submit btn"><%= submit_tag "Apply", :class => "btn btn-default btn-sm" %></li>
     <% end %>
   </ul>
 </div>
 
-<div id="main" class="grid_6 alpha">
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Category</th>
-        <th>Created</th>
-        <th>Updated</th>
-        <th id="special"><%= button_to 'New', new_node_path, :method => :get %></th>
-      </tr>
-    </thead>
-    <tbody>
-      <% @nodes.all.each do |node| %>
-        <tr>
-          <td><%= node.id%></td>
-          <td><%= link_to node.title, node %></td>
-          <td><%= node.author %></td>
-          <td><%= node.category.name unless node.category.blank? %></td>
-          <td><%= prettytime(node.created_at) %></td>
-          <td><%= prettytime(node.updated_at) %></td>
-          <td><%= button_to 'Edit', edit_node_path(node), :method => :get %> <%= button_to "Delete", {:controller => :nodes,
-:action => 'destroy', :id => node.id }, { :confirm => 'Are you sure?' , :method => :delete} %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
-
-<div id="sidebar" class="grid_3 omega clearfix">
-  <div class="feat_page_title">
-    <h2>Most Recent Entry:</h2>
-    <h3><%= Node.last.title %></h3>
-  </div>
-  <div class="daily_img">
-    <%= image_tag "template.jpg" %>
-  </div>
-  <div class="info clearfix">
+<div class="row">
+  <div id="main" class="col-md-16">
     <table>
-      <tr>
-        <th>Total pages:</th> <td>number of pages</td>
-      </tr>
-      <tr>
-        <th>Pages / day:</th> <td>Number of pages created per day on average</td>
-      </tr>
-      <tr>
-        <th>Other stats:</th> <td>more stats</td>
-      </tr>
-      <tr>
-        <th>More other stats</th> <td>other stuff</td>
-      </tr>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Category</th>
+          <th>Created</th>
+          <th>Updated</th>
+          <th><%= button_to 'New', new_node_path, :method => :get, :class => "btn btn-default btn-sm" %></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @nodes.all.each do |node| %>
+          <tr>
+            <td><%= node.id%></td>
+            <td><%= link_to node.title, node %></td>
+            <td><%= node.author %></td>
+            <td><%= node.category.name unless node.category.blank? %></td>
+            <td><%= prettytime(node.created_at) %></td>
+            <td><%= prettytime(node.updated_at) %></td>
+            <td class="table_buttons"><%= button_to 'Edit', edit_node_path(node), :method => :get, :class => "btn btn-default btn-sm" %> <%= button_to "Delete", {:controller => :nodes,
+  :action => 'destroy', :id => node.id }, { :confirm => 'Are you sure?' , :method => :delete, :class => "btn btn-default btn-sm"} %></td>
+          </tr>
+        <% end %>
+      </tbody>
     </table>
+  </div>
+
+  <div id="sidebar" class="col-md-7 col-md-offset-1">
+    <div class="feat_page_title">
+      <h2>Most Recent Entry:</h2>
+      <h3><%= Node.last.title %></h3>
+    </div>
+    <div class="daily_img">
+      <%= image_tag "template.jpg" %>
+    </div>
+    <div class="info clearfix">
+      <table>
+        <tr>
+          <th>Total pages:</th> <td>number of pages</td>
+        </tr>
+        <tr>
+          <th>Pages / day:</th> <td>Number of pages created per day on average</td>
+        </tr>
+        <tr>
+          <th>Other stats:</th> <td>more stats</td>
+        </tr>
+        <tr>
+          <th>More other stats</th> <td>other stuff</td>
+        </tr>
+      </table>
+    </div>
   </div>
 </div>

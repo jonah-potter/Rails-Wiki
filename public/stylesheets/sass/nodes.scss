@@ -2,28 +2,30 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import 'base.scss';
+@import 'bootstrap/_variables.scss';
 
-/* apply a natural box layout model to all elements */
-*, *:before, *:after {
-  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
- }
- 
+// Colors:
+$primary: #EDEFF0;
+$secondary: white;
+$text: black;
+//$accent: #b3e0f2;
+$accent: silver;
+//$border: #FFBB71;
+$border: silver;
+
 :root {
   font-family: $font-family-serif;
   font-size: 16px;
   font-weight: 300;
   color: $text;
   background: white;
-  width: 100vw;
   line-height:1.5rem;
 }
 
-#container {
-  margin-top: 35px;
-  padding: 0 1%;
-  border-radius: 5px;
+.container {
+  margin-top: 70px;
 }
+
 #header {
   .title {
     font-family: $font-family-sans-serif;
@@ -41,26 +43,20 @@
       margin: 0;
     }
   }
-  .search_index {
-    font: .75rem $font-family-sans-serif;
-    li {
+  .search_index li {
     float: left;
     margin: 2px;
-    }
+    list-style-type: none;
   } 
 }
 
 #main {
-  font-size: .9rem;
-  margin-top: 0px;
   padding: 2%;
   line-height: 1.5rem;
   background: $secondary;
   border-radius: 5px;
   border: 2px solid $accent;
-  p {
-    margin: -1% 0 0 0;
-  }
+  
   form,
   form div{
     font-family: $font-family-sans-serif;
@@ -78,9 +74,10 @@
   padding: 0;
   float: right;
   border-radius: 5px;
-  h2, h3 {
+  h3, h4 {
     font-family: $font-family-sans-serif;
     text-align: center;
+    margin-top: 10px;
   }
   .daily_img img {
     max-width: 90%;
@@ -91,19 +88,6 @@
     color: $text;
     margin: 8px;
   }
-}
-
-table{
-  border-collapse: collapse;
-}
-th, td {
-  font-size: .75rem;
-	padding: 4px 4px 4px 4px;
-  border: 2px $border solid;
-}
-th {
-  font-family: $font-family-sans-serif;
-  font-weight: bold;
 }
 
 .search_index li.btn.search_submit {

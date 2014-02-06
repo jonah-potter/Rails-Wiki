@@ -24,7 +24,7 @@
 
 <div class="row">
   <div id="main" class="col-md-16">
-    <table>
+    <table class='table'>
       <thead>
         <tr>
           <th>ID</th>
@@ -55,14 +55,14 @@
 
   <div id="sidebar" class="col-md-7 col-md-offset-1">
     <div class="feat_page_title">
-      <h2>Most Recent Entry:</h2>
-      <h3><%= Node.last.title %></h3>
+      <h3>Most Recent Entry:</h3>
+      <h4><%= Node.last.title %></h4>
     </div>
     <div class="daily_img">
       <%= image_tag "template.jpg" %>
     </div>
     <div class="info clearfix">
-      <table>
+      <table class='table'>
         <tr>
           <th>Total pages:</th> <td>number of pages</td>
         </tr>

@@ -1,33 +1,39 @@
 <%= form_for(@node) do |f| %>
-  <% if @node.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@node.errors.count, "error") %> prohibited this node from being saved:</h2>
+<div id="header" class="row">
+  <div class="title_edit field col-md-8">
+    <h4>Title:</h4>
+    <%= f.text_field :title, :class => 'title_edit' %>
+  </div>
+</div>
 
-      <ul>
-      <% @node.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div class="row">
+  <div id="main" class="field col-md-16">
+    <%= f.text_area :maintext, :class => 'col-md-24 maintext_edit', :rows => '20'%>
+  </div>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :author %><br>
-    <%= f.text_field :author %>
-  </div>
-  <div class="field">
-      <%= f.label :category_id %><br>
-      <%= f.collection_select :category_id, Category.all, :id, :name, :include_blank => true %>
+  <div id="sidebar" class="col-md-7 col-md-offset-1">
+    <div class="feat_page_title">
+      <h4><%= Node.last.title %></h4>
     </div>
-  <div class="field">
-    <%= f.label :maintext %><br>
-    <%= f.text_field :maintext %>
+    <div class="daily_img">
+      <%= image_tag "template.jpg" %>
+    </div>
+    <div class="info clearfix">
+      <table class='table'>
+        <tr>
+          <th>Total pages:</th> <td>number of pages</td>
+        </tr>
+        <tr>
+          <th>Pages / day:</th> <td>Number of pages created per day on average</td>
+        </tr>
+        <tr>
+          <th>Other stats:</th> <td>more stats</td>
+        </tr>
+        <tr>
+          <th>More other stats</th> <td>other stuff</td>
+        </tr>
+      </table>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+</div>
 <% end %>

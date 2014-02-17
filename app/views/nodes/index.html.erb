@@ -2,7 +2,7 @@
   <div class="title col-md-4 col-md-offset-4">
     <h1>Node Index</h1>
   </div>
-  <ul class="search_index form-horizontal col-md-14 col-md-offset-1">
+  <ul class="search_index form-horizontal col-md-12 col-md-offset-1">
     <%= form_tag nodes_path, :method => :get do %>
       <li>Search by:&nbsp;</li>
       <li>
@@ -20,6 +20,9 @@
       <li class="search_submit btn"><%= submit_tag "Apply", :class => "btn btn-default btn-sm" %></li>
     <% end %>
   </ul>
+  <div class="title col-md-4 col-md-offset-1">
+    <h1>Latest Entry:</h1>
+  </div>
 </div>
 
 <div class="row">
@@ -55,7 +58,6 @@
 
   <div id="sidebar" class="col-md-7 col-md-offset-1">
     <div class="feat_page_title">
-      <h3>Most Recent Entry:</h3>
       <h4><%= Node.last.title %></h4>
     </div>
     <div class="daily_img">

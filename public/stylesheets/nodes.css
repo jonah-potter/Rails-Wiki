@@ -23,6 +23,11 @@
   #header .title h1 {
     text-indent: 2vw;
     margin: 0; }
+  #header .title h4 {
+    display: inline; }
+#header .title_edit {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.2rem; }
 #header .search_index li {
   float: left;
   margin: 2px;

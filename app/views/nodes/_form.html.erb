@@ -1,39 +1,34 @@
 <%= form_for(@node) do |f| %>
-<div id="header" class="row">
-  <div class="title_edit field col-md-8">
-    <h4>Title:</h4>
-    <%= f.text_field :title, :class => 'title_edit' %>
-  </div>
-</div>
-
-<div class="row">
-  <div id="main" class="field col-md-16">
-    <%= f.text_area :maintext, :class => 'col-md-24 maintext_edit', :rows => '20'%>
+  <div id="header" class="row">
+    <div class="title_edit field col-md-8">
+      <h4>Title:</h4>
+      <%= f.text_field :title, :class => 'title_edit' %>
+    </div>
   </div>
 
-  <div id="sidebar" class="col-md-7 col-md-offset-1">
-    <div class="feat_page_title">
-      <h4><%= Node.last.title %></h4>
+  <div class="row">
+    <div id="main" class="field col-md-16">
+      <%= f.text_area :maintext, :class => 'col-md-24 maintext_edit', :rows => '20'%>
     </div>
-    <div class="daily_img">
-      <%= image_tag "template.jpg" %>
-    </div>
-    <div class="info clearfix">
-      <table class='table'>
-        <tr>
-          <th>Total pages:</th> <td>number of pages</td>
-        </tr>
-        <tr>
-          <th>Pages / day:</th> <td>Number of pages created per day on average</td>
-        </tr>
-        <tr>
-          <th>Other stats:</th> <td>more stats</td>
-        </tr>
-        <tr>
-          <th>More other stats</th> <td>other stuff</td>
-        </tr>
-      </table>
+
+    <div id="sidebar" class="col-md-7 col-md-offset-1">
+      <div class="feat_page_title">
+        <h4><%= Node.last.title %></h4>
+      </div>
+      <div class="daily_img">
+        <%= image_tag "template.jpg" %>
+      </div>
+      <div id="node_table_row">
+        <%= f.fields_for :table do |table_rows| %>
+          <%= table_rows.fields_for :row do |table_cols| %>
+            <%= table_cols.text_field :head %>
+            <%= table_cols.text_field :tail %>
+          <% end %>
+        <% end %>
+        <button id="add_table_row" type="button" class="btn btn-small">Add Row</button>
+      </div>
     </div>
   </div>
-</div>
+  <%= f.submit %>
 <% end %>
+

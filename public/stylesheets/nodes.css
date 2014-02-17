@@ -52,7 +52,8 @@
   margin: 0;
   padding: 0;
   float: right;
-  border-radius: 5px; }
+  border-radius: 5px;
+  height: 800px; }
   #sidebar h3, #sidebar h4 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;

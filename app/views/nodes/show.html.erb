@@ -13,25 +13,13 @@
     </div>
     <div class="info">
       <table class="table">
-        <tr>
-          <th>Mood:</th> <td>text</td>
-        </tr>
-        <tr>
-          <th>Attire:</th> <td>Description of clothes worn that will probably not be a whole lot longer than this sentence</td>
-        </tr>
-        <tr>
-          <th>Weather:</th> <td>temp, description</td>
-        </tr>
-        <tr>
-          <th>Attribute:</th> <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-        </tr>
-        <tr>
-          <th>Attribute:</th> <td>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</td>
-        </tr>
-        <tr>
-          <th>Attribute:</th> <td>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</td>
-        </tr>
+        <% @node.table.each do |row| %>
+            <tr>
+              <th><%= row[1]['head'] %></th> <td><%= row[1]['tail'] %></td>
+            </tr>
+        <% end %>
       </table>
     </div>
   </div>
 </row>
+<!-- @node.table = {'row1' => {'head' => 'stuff', 'tail' => 'stuff'}, 'row2' => {'head' => 'stuff', 'tail' => 'stuff'}, 'row3' => {'head' => 'stuff', 'tail' => 'stuff'}}-->

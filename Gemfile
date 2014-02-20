@@ -43,4 +43,5 @@ group :development do
   gem 'better_errors'
   gem 'sass'
   gem "binding_of_caller"
+  gem 'pry'
 end

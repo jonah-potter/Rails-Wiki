@@ -12,23 +12,13 @@
     </div>
 
     <div id="sidebar" class="col-md-7 col-md-offset-1">
-      <div class="feat_page_title">
-        <h4><%= Node.last.title %></h4>
-      </div>
-      <div class="daily_img">
+      <div class="sidebar_img">
         <%= image_tag "template.jpg" %>
       </div>
-      <div id="node_table_row">
-        <%= f.fields_for :table do |table_rows| %>
-          <%= table_rows.fields_for :row do |table_cols| %>
-            <%= table_cols.text_field :head %>
-            <%= table_cols.text_field :tail %>
-          <% end %>
-        <% end %>
-        <button id="add_table_row" type="button" class="btn btn-small">Add Row</button>
-      </div>
+      <div id="sidebar_table"></div>
+      <button id='add_row' class='btn btn-small' type='button' onclick='$("#sidebar_table").append(<%= (render 'tableform').to_json %>)'>Add Row</button>
+      <button id='remove_row' class='btn btn-small' type='button'>Remove Row</button>
     </div>
   </div>
   <%= f.submit %>
 <% end %>
-

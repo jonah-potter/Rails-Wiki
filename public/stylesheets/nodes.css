@@ -52,13 +52,12 @@
   margin: 0;
   padding: 0;
   float: right;
-  border-radius: 5px;
-  height: 800px; }
+  border-radius: 5px; }
   #sidebar h3, #sidebar h4 {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-align: center;
     margin-top: 10px; }
-  #sidebar .daily_img img {
+  #sidebar .sidebar_img img {
     max-width: 90%;
     display: block;
     margin: 5% auto; }

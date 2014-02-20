@@ -8,18 +8,19 @@
     <p><%= @node.maintext %></p>
   </div>
   <div id="sidebar" class="col-md-7 col-md-offset-1">
-    <div class="daily_img">
+    <div class="sidebar_img">
       <%= image_tag "template.jpg" %>
     </div>
     <div class="info">
       <table class="table">
-        <% @node.table.each do |row| %>
+        <% @node.table do |table| %>
+          <% table['h'].length.times do |i| %>
             <tr>
-              <th><%= row[1]['head'] %></th> <td><%= row[1]['tail'] %></td>
+              <th><%= table['h'][i] %></th><td><%= table['d'][i] %></td>
             </tr>
+          <% end %>
         <% end %>
       </table>
     </div>
   </div>
 </row>
-<!-- @node.table = {'row1' => {'head' => 'stuff', 'tail' => 'stuff'}, 'row2' => {'head' => 'stuff', 'tail' => 'stuff'}, 'row3' => {'head' => 'stuff', 'tail' => 'stuff'}}-->

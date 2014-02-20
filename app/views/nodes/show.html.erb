@@ -13,12 +13,10 @@
     </div>
     <div class="info">
       <table class="table">
-        <% @node.table do |table| %>
-          <% table['h'].length.times do |i| %>
-            <tr>
-              <th><%= table['h'][i] %></th><td><%= table['d'][i] %></td>
-            </tr>
-          <% end %>
+        <% @node.table['h'].length.times do |i| %>
+          <tr>
+            <th><%= @node.table['h'][i] %></th><td><%= @node.table['d'][i] %></td>
+          </tr>
         <% end %>
       </table>
     </div>

@@ -1,7 +1,6 @@
 <%= form_for(@node) do |f| %>
   <div id="header" class="row">
     <div class="title_edit field col-md-8">
-      <h4>Title:</h4>
       <%= f.text_field :title, :class => 'title_edit' %>
     </div>
   </div>
@@ -15,10 +14,16 @@
       <div class="sidebar_img">
         <%= image_tag "template.jpg" %>
       </div>
-      <div id="sidebar_table"></div>
-      <button id='add_row' class='btn btn-small' type='button' onclick='$("#sidebar_table").append(<%= (render 'tableform').to_json %>)'>Add Row</button>
-      <button id='remove_row' class='btn btn-small' type='button'>Remove Row</button>
+      <div id="sidebar_table">
+        <% @node.table['h'].length.times do |i| %>
+          <input id='node_table_h_' name='node[table[h][]' class='table_h_edit' type='text' value='<%= @node.table['h'][i]%>'><input id='node_table_d_' name='node[table[d][]' class='table_d_edit' type='text' value='<%= @node.table['d'][i]%>'>
+        <% end %>
+      </div>
+      <div id="table_buttons">
+        <button id='add_row' class='btn btn-default btn-small' type='button' onclick='$("#sidebar_table").append( <%= (render 'tableform').to_json %> )'>Add Row</button>
+        <button id='remove_row' class='btn btn-default btn-small' type='button' onclick='$("#sidebar_table input:nth-last-child(-n+2)").remove()'>Remove Row</button>
+      </div>
     </div>
   </div>
-  <%= f.submit %>
+  <%= f.submit :class => 'btn btn-default btn-small' %>
 <% end %>

@@ -90,10 +90,17 @@ $border: silver;
     max-width: 90%;
     display: block;
     margin: 5% auto;
-    }
+  }
+  #sidebar_table {
+    max-width: 90%;
+    margin: auto;
+  }
   .info {
     color: $text;
     margin: 8px;
+  }
+  #table_buttons {
+    margin: 3% 5%;
   }
 }
 

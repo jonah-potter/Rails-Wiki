@@ -61,9 +61,14 @@
     max-width: 90%;
     display: block;
     margin: 5% auto; }
+  #sidebar #sidebar_table {
+    max-width: 90%;
+    margin: auto; }
   #sidebar .info {
     color: black;
     margin: 8px; }
+  #sidebar #table_buttons {
+    margin: 3% 5%; }
 
 .search_index li.btn.search_submit {
   padding: 0px;
